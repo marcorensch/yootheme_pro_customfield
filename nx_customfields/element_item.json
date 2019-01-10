@@ -1,0 +1,41 @@
+{
+    "name": "nx_customfields_item",
+    "title": "Item",
+    "width": 600,
+    "fields": {
+        "content": {
+            "label": "Content"
+        },
+        "cffieldname": {
+            "label": "CustomField Name"
+        },
+        "field_prefix": {
+            "label": "CustomField Präfix",
+            "description": "Dieser Text wird <b>vor</b> dem Customfield angezeigt.",
+            "type": "editor",
+            "attrs": {
+                "rows": 10,
+                "placeholder": "Enter text..."
+            }
+        },
+        "field_suffix": {
+            "label": "CustomField Suffix",
+            "description": "Dieser Text wird <b>nach</b> dem Customfield angezeigt.",
+            "type": "editor",
+            "attrs": {
+                "rows": 10,
+                "placeholder": "Enter text..."
+            }
+        }
+    },
+    "fieldset": {
+        "default": {
+            "fields": [
+                "content",
+                "cffieldname",
+                "field_prefix",
+                "field_suffix"
+            ]
+        }
+    }
+}

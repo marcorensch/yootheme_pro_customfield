@@ -1,0 +1,69 @@
+{
+    "name": "nx_customfields",
+    "title": "nx-CustomFields",
+    "icon": "${THEME}_broncos/builder/nx_customfields/icon.svg",
+    "iconSmall": "${THEME}_broncos/builder/nx_customfields/icon-small.svg",
+    "element": true,
+    "container": true,
+    "width": 500,
+    "defaults": {
+        "field_select": 1
+    },
+    "fields": {
+        "field_content": {
+            "label": "Content Items",
+            "type": "content-items",
+            "title": "content",
+            "item": "nx_customfields_item"
+        },
+        "field_text": {
+            "label": "Text",
+            "type": "text"
+        },
+        "field_select_layout": {
+            "label": "Select Layout",
+            "description": "Choose your Layout",
+            "type": "select",
+            "options": {
+                "Simple block": 0,
+                "Result table": 1
+            }
+        },
+
+        "field_editor_css": {
+            "label": "Code editor",
+            "type": "editor",
+            "editor": "code",
+            "mode": "css",
+            "description": "Available classes: <b>.el-container, .el-text, .el-number</b> Please note and use also an ID for CSS rules",
+            "attrs": {
+                "debounce": 500
+            }
+        },
+        "name": "${NAME}",
+        "id": "${ID}",
+        "class": "${CLS}"
+    },
+    "fieldset": {
+        "default": {
+            "type": "tabs",
+            "fields": [{
+                    "title": "Content",
+                    "fields": [
+                        "field_select_layout",
+                        "field_content"
+                    ]
+                },
+                {
+                    "title": "Advanced",
+                    "fields": [
+                        "name",
+                        "id",
+                        "class",
+                        "field_editor_css"
+                    ]
+                }
+            ]
+        }
+    }
+}
