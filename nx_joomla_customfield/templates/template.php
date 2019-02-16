@@ -1,5 +1,7 @@
 <?php
 
+require_once(dirname(__FILE__).'/helper.php');
+
 // Joomla! Fields Helper & Setup to get the Fields for this article:
 JLoader::register('FieldsHelper', JPATH_ADMINISTRATOR . '/components/com_fields/helpers/fields.php');
 $model = JModelLegacy::getInstance('Article', 'ContentModel', array('ignore_request'=>true));
@@ -14,17 +16,6 @@ $itemCustomFields = array();
 foreach($jcFields as $field) {
     $itemCustomFields[$field->name]['value'] = $field->rawvalue;
     $itemCustomFields[$field->name]['label'] = $field->label;
-};
-
-function dateformat($date,$format){
-
-    
-    if($format === '') $format = "%e.%B %Y";
-
-    // $formattedDate = date_format(new DateTime($date), $format);
-    $formattedDate = strftime($format ,strtotime($date));
-
-    return $formattedDate;
 };
 
 if(!empty($props['fieldname'])){

@@ -8,7 +8,8 @@
     "container": false,
     "width": 500,
     "defaults": {
-        "fieldtype": "text"
+        "fieldtype": "text",
+        "dateformat": "%e.%B %Y"
     },
     "templates": {
         "render": "./templates/template.php",
@@ -30,9 +31,8 @@
             }
         },
         "dateformat": {
-            "show": "fieldtype:date",
             "label": "Date Format",
-            "description": "Use your custom date format"
+            "description": "See <a target='_blank' href='http://php.net/manual/de/function.strftime.php'>Examples</a>"
         }
     },
     "fieldset": {
