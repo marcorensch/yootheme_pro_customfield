@@ -30,7 +30,7 @@ if(!empty($props['fieldname'])){
             $string = $rawvalue;
         };
 
-        echo '<div class="">'.$string.'</div>'."\n";
+        echo '<div class="'.$props['class'].'">'.$string.'</div>'."\n";
 
     }else{
         echo '<script> console.log("nx-Joomla! Customfield Plugin for Yootheme Pro: Customfield '.$props['fieldname'].' not found in this article");</script>';

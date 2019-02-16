@@ -33,7 +33,12 @@
         "dateformat": {
             "label": "Date Format",
             "description": "See <a target='_blank' href='http://php.net/manual/de/function.strftime.php'>Examples</a>"
-        }
+        },
+        "name": "${builder:name}",
+        "status": "${builder:status}",
+        "id": "${builder:id}",
+        "class": "${builder:cls}",
+        "animation": "${builder:animation}"
     },
     "fieldset": {
         "default": {
@@ -47,12 +52,7 @@
                         "dateformat"
                     ]
                 },
-                {
-                    "title": "Advanced",
-                    "fields": [
-
-                    ]
-                }
+                "${builder:advanced}"
             ]
         }
     }
