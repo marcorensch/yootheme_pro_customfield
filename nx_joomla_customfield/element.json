@@ -1,0 +1,59 @@
+{
+    "@import": "./element.php",
+    "name": "nx_joomla_customfield",
+    "title": "Joomla! Customfield",
+    "icon": "${url:images/icon.svg}",
+    "iconSmall": "${url:images/iconSmall.svg}",
+    "element": true,
+    "container": false,
+    "width": 500,
+    "defaults": {
+        "fieldtype": "text"
+    },
+    "templates": {
+        "render": "./templates/template.php",
+        "content": "./templates/content.php"
+    },
+    "fields": {
+        "fieldname":{
+            "label": "Fieldname",
+            "description": "Customfield Name 'name-of-field'",
+            "type": "text"
+        },
+        "fieldtype":{
+            "label": "Field Type",
+            "description": "Select the Content Type for rendering",
+            "type": "select",
+            "options": {
+                "Text": "text",
+                "Date": "date"
+            }
+        },
+        "dateformat": {
+            "show": "fieldtype:date",
+            "label": "Date Format",
+            "description": "Use your custom date format"
+        }
+    },
+    "fieldset": {
+        "default": {
+            "type": "tabs",
+            "fields": [
+                {
+                    "title": "Element",
+                    "fields": [
+                        "fieldname",
+                        "fieldtype",
+                        "dateformat"
+                    ]
+                },
+                {
+                    "title": "Advanced",
+                    "fields": [
+
+                    ]
+                }
+            ]
+        }
+    }
+}
